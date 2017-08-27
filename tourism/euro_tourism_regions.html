@@ -68,8 +68,8 @@ var svg = d3.select(".embed").append("svg")
         .datum(graticule)
         .attr("class", "graticule")
         .attr("d", path);
-  d3.json("http://datateam.edjnet.org/turismo/nuts2.json", function(error, europe) {
-  d3.csv("http://datateam.edjnet.org/turismo/tourism_delta_nuts_2013-2016.csv", function(error, povrate) {
+  d3.json("https://cdn.rawgit.com/giuslaur/tourism/master/nuts2.json", function(error, europe) {
+  d3.csv("https://cdn.rawgit.com/giuslaur/tourism/master/tourism_delta_nuts_2013-2016.csv", function(error, povrate) {
     var land = topojson.feature(europe, europe.objects.nuts2);
 
     data = {};
